@@ -21,6 +21,8 @@ You do not need the physics to use it. The short version of what it found:
 ## Getting started
 
 ```bash
+git clone https://github.com/AmadeusFidos/Grinding_slurry_simulator.git
+cd Grinding_slurry_simulator
 pip install -r requirements.txt
 
 python run_gui.py             # the desktop window
@@ -86,6 +88,37 @@ best = find_recipe(Setup(grit="600", relative_humidity=0.55))
 print(best.recipe.describe())
 print(best.describe_tolerances())
 ```
+
+### A Windows program (LapSim.exe)
+
+The desktop window can be packaged as an ordinary Windows program that runs
+without Python installed. Building it needs Python 3.10 or newer from
+[python.org](https://www.python.org/downloads/); the build script puts numpy,
+scipy, matplotlib and PyInstaller into a private `.venv-build` folder and leaves
+your main Python alone. Get the code with
+[Git for Windows](https://git-scm.com/download/win) (or download the ZIP from the
+GitHub page), then in a command prompt or PowerShell:
+
+```
+git clone https://github.com/AmadeusFidos/Grinding_slurry_simulator.git
+cd Grinding_slurry_simulator
+.\build_exe.cmd
+```
+
+Double-clicking `build_exe.cmd` in Explorer works too. The first build
+downloads about 100 MB and takes a few minutes. It ends by running the new
+program once with `--check`, which simulates a recipe and renders a figure
+without opening a window, so a broken build says so straight away instead of
+when you first click.
+
+The result is `dist\LapSim\LapSim.exe`. Keep it in that folder (about 160 MB):
+the files beside it are the Python runtime it carries. To move or share it, copy or zip the whole
+`dist\LapSim` folder; a desktop shortcut to `LapSim.exe` is the easy way to start
+it. Figures rendered from the window are saved in `dist\LapSim\figures`.
+
+To update later, `git pull` and run `.\build_exe.cmd` again. If a build is
+interrupted part-way and the next one fails with a permission error, close
+any leftover Python windows, delete the `.venv-build` folder and run it again.
 
 ---
 
@@ -324,9 +357,11 @@ lapsim/
   gui.py           the desktop window
   cli.py           command line
   api.py           JSON bridge, for driving the model from another language
+  paths.py         where figures are saved: the repository, or beside the .exe
 tests/             physics checks, plus the engine/window contract
-run_gui.py         open the desktop window
+run_gui.py         open the desktop window (--check: self-test, no window)
 run_demo.py        everything, end to end
+build_exe.cmd      build the standalone Windows program, LapSim.exe
 LapSim.UI/         optional C# WinForms front end (see below)
 ```
 
@@ -340,7 +375,9 @@ only enables rendering new figures).
 
 It is a genuine alternative rather than the main path: the Python window above
 runs in the same environment as the rest of the project and needs no second
-build system. Reach for this one only if you specifically want a .NET binary.
+build system. Reach for this one only if you specifically want a .NET binary. If
+all you want is a Windows program, the packaged `LapSim.exe` described under
+Getting started is simpler: it needs neither .NET nor an installed Python.
 
 ---
 

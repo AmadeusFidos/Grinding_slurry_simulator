@@ -2,3 +2,10 @@ __pycache__/
 *.pyc
 LapSim.UI/bin/
 LapSim.UI/obj/
+
+# Windows executable build (build_exe.cmd)
+.venv-build/
+build/
+dist/
+*.spec
+lapsim-check.log

@@ -40,8 +40,7 @@ from lapsim.vehicle import (
     surface_tension,
     water_activity,
 )
-
-FIGURE_DIR = Path(__file__).resolve().parent.parent / "figures"
+from lapsim.paths import FIGURE_DIR
 
 
 def _save(fig, name: str, theme: style.Theme, directory: Path | None = None) -> Path:

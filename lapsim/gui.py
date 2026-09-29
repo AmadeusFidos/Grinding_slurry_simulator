@@ -29,11 +29,11 @@ from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
 from lapsim.materials import ABRASIVES, LAPS, STONES, parse_micron_label
+from lapsim.paths import FIGURE_DIR
 from lapsim.style import margin_hex
 from lapsim.simulate import Result, Setup, simulate
 
 DROP_ML = 0.05
-REPOSITORY_ROOT = Path(__file__).resolve().parent.parent
 
 
 # --------------------------------------------------------------------------- #
@@ -857,8 +857,7 @@ class SimulatorWindow(ttk.Frame):
 
     def _list_existing_figures(self) -> None:
         """Offer whatever has already been rendered, so the tab is useful at once."""
-        folder = REPOSITORY_ROOT / "figures"
-        existing = sorted(str(path) for path in folder.glob("*.png"))
+        existing = sorted(str(path) for path in FIGURE_DIR.glob("*.png"))
         self.figure_choice.configure(values=existing)
         if existing:
             self.figure_choice.set(existing[0])
