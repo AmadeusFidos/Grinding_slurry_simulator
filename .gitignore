@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+LapSim.UI/bin/
+LapSim.UI/obj/

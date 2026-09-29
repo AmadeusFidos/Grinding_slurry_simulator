@@ -1,0 +1,167 @@
+
+==============================================================================
+  LAPIDARY SLURRY SIMULATOR
+==============================================================================
+
+Stone:       Agate / chalcedony
+Lap:         Float glass plate
+Pressure:    100 kPa (40 N over 400 mm2)
+Stroke:      0.25 m/s
+Room:        21 C, 45 % RH
+On the plate: 8 ml spread over 200 cm2
+
+==============================================================================
+  RECOMMENDED RECIPES  (one per grade you own)
+==============================================================================
+
+--- Black silicon carbide 320 (d50 29.2 um) ---
+For 100 ml of Black silicon carbide 320 slurry:
+      25.9 g   grit
+      29.4 ml  water
+      62.4 ml  glycerine
+         2     drops of dish soap
+  (19 wt% solids, 73 wt% glycerine in the liquid)
+  Still works between 2 and 63 wt% grit, and between 66 and 90 % glycerine (each varied on its own).
+  Expect 35 um/min, Ra 0.75 um, like single cream.
+  Tightest limit: will not crust (margin +0.82).
+
+--- Black silicon carbide 400 (d50 17.3 um) ---
+For 100 ml of Black silicon carbide 400 slurry:
+      16.8 g   grit
+      30.4 ml  water
+      64.4 ml  glycerine
+         1     drop of dish soap
+  (13 wt% solids, 73 wt% glycerine in the liquid)
+  Still works between 3 and 53 wt% grit, and between 67 and 84 % glycerine (each varied on its own).
+  Expect 33 um/min, Ra 0.68 um, like single cream.
+  Tightest limit: not too runny (margin +0.70).
+
+--- Black silicon carbide 600 (d50 9.3 um) ---
+For 100 ml of Black silicon carbide 600 slurry:
+      51.6 g   grit
+      34.6 ml  water
+      49.2 ml  glycerine
+         1     drop of dish soap
+  (35 wt% solids, 64 wt% glycerine in the liquid)
+  Still works between 23 and 47 wt% grit, and between 61 and 70 % glycerine (each varied on its own).
+  Expect 22 um/min, Ra 0.32 um, like milk.
+  Tightest limit: not too runny (margin +0.33).
+
+--- Black silicon carbide 1000 (d50 4.5 um) ---
+For 100 ml of Black silicon carbide 1000 slurry:
+      81.1 g   grit
+      52.9 ml  water
+      21.8 ml  glycerine
+         1     drop of dish soap
+  (50 wt% solids, 34 wt% glycerine in the liquid)
+  Still works between 48 and 54 wt% grit, and between 29 and 39 % glycerine (each varied on its own).
+  Expect 12 um/min, Ra 0.15 um, like single cream.
+  Tightest limit: will not crust (margin +0.08).
+
+
+==============================================================================
+  FULL DETAIL FOR ONE RECIPE  (600 grit at its best mix)
+==============================================================================
+
+==========================================================================
+  Black silicon carbide 600  on  Agate / chalcedony  over a Float glass plate
+==========================================================================
+
+SLURRY
+  grit loading            34.8 wt%  = 16.1 vol%   (jams at 57 vol%)
+  grain size             d50 9.3 um, top cut 19.0 um, Sauter mean 8.9 um
+  liquid                 64 wt% glycerine, 5.8 x 10^-4 soap, mu = 14.1 mPa.s, gamma = 30 mN/m, a_w = 0.690
+  slurry viscosity       27 mPa.s at high shear;  yield stress 0.0 Pa
+  consistency            like milk   (gels above 27 vol% solids)
+  blob height on plate   0.57 mm   <- measurable: leave a blob and see
+  grit stays suspended   79 min
+
+CONTACT  (regime: abrasive)
+  pressure               100 kPa  (40 N over 400 mm2)
+  plate gap              17.8 um  = 1.92 x d50
+  load on grains         81 %   (rest is carried hydrodynamically by the film)
+  grains actually cutting 5.24 per mm2  = 0.055 % of those present
+  penetration into stone 499 nm at the deepest grain;  into the plate 689 nm
+  grains being crushed   0.0 %
+  grain anchoring        0.018  (grains rolling freely, three-body)
+
+CUTTING
+  stone removal          22.1 um/min   (brittle regime, 87 % of load cracking)
+  plate wear             26.6 um/min   (1.20 x the stone)
+  Preston coefficient    1.48e-11 m2/N
+  drag                   9.2 N  (0.23 x the load); 2.3 W, contact +6 K
+
+FINISH
+  roughness              Ra 0.32 um, Rz 1.76 um
+  subsurface damage      4.4 um   <- the next grit must remove at least this much
+  worst-case scratch     0.57 um deep, from the 19 um top-cut grains
+
+WORKING LIFE OF THE FILM ON THE PLATE
+  8 ml over 200 cm2 = a 400 um film, losing 0.05 g water/min
+  stays in the target band for indefinitely
+  dries down to          20 vol% solids  (workable ceiling 52 vol%)
+  - Cannot dry to a crust: glycerine holds the endpoint at 20 vol% solids, below the 52 vol% ceiling. It thickens and stops; a spray of water restores it.
+
+No warnings: this recipe sits inside every target band.
+
+==============================================================================
+  GRIT SEQUENCE FROM A SAWN FACE
+==============================================================================
+
+  abrasive                 grit    d50      Ra     SSD       cut   clear    time  recipe (per 100 ml)
+                                    um      um      um    um/min      um     min
+  ----------------------------------------------------------------------------------------------------------------------
+  Black silicon carbide     320   29.2   0.753   10.35      35.2  156.00     4.4  26 g + 29 ml water + 62 ml glyc + 2 drops
+  Black silicon carbide     400   17.3   0.682    9.37      32.5   13.46     0.4  17 g + 30 ml water + 64 ml glyc + 1 drop
+  Black silicon carbide     600    9.3   0.320    4.40      22.1   12.19     0.6  52 g + 35 ml water + 49 ml glyc + 1 drop
+  Black silicon carbide    1000    4.5   0.149    2.05      11.9    5.72     0.5  81 g + 53 ml water + 22 ml glyc + 1 drop
+  ----------------------------------------------------------------------------------------------------------------------
+  Total 6 min of continuous grinding at the stated pressure and speed
+  (real bench time is longer: strokes lift, pressure varies, and the plate needs re-charging).
+
+==============================================================================
+  WHAT THE FINER ABRASIVES WOULD ADD
+==============================================================================
+
+Grades finer than FEPA F1000, by micron size. They run in a smaller
+gap, where the slurry film lifts harder.
+Where the default technique will not carry them, the change that does
+is given instead.
+
+  abrasive                  grade    Ra um   SSD um   um/min  how to run it
+  ------------------------------------------------------------------------------------------------
+  Green silicon carbide       3um    0.157     2.16      4.0  stroke slowly (0.06 m/s)
+  Green silicon carbide       2um    0.052     0.72      0.6  stroke slowly (0.06 m/s)
+  White fused alumina         3um    0.255     3.50     13.5  at the default stroke and pressure
+  White fused alumina         2um    0.097     1.33      2.0  stroke slowly (0.06 m/s)
+  White fused alumina         1um                             nothing in the list makes this work
+
+==============================================================================
+  HOW MUCH YOUR TARGETS MATTER
+==============================================================================
+
+The single most consequential setting is how thick 'not too runny' means.
+Relaxing it lets you use far less glycerine:
+
+     min low-shear viscosity  glycerine   grit   um/min
+  --------------------------------------------------------
+                        5 mPa.s        55 %    10 %     31.1
+                       10 mPa.s        62 %    20 %     26.6
+                       20 mPa.s        62 %    40 %     22.3
+                       50 mPa.s        48 %    60 %     20.0
+
+  The default of 20 mPa.s means 'clearly thicker than water, holds a
+  film on a tilted plate'. Lower it if you are happy to stir often.
+
+==============================================================================
+  FIGURES
+==============================================================================
+
+  /home/amadeus/Physics/lapping_slurry_sim/figures/fig1_vehicle_dark.png
+  /home/amadeus/Physics/lapping_slurry_sim/figures/fig2_recipe_windows_dark.png
+  /home/amadeus/Physics/lapping_slurry_sim/figures/fig3_drying_dark.png
+  /home/amadeus/Physics/lapping_slurry_sim/figures/fig4_contact_dark.png
+  /home/amadeus/Physics/lapping_slurry_sim/figures/fig5_grit_comparison_dark.png
+  /home/amadeus/Physics/lapping_slurry_sim/figures/fig6_sequence_dark.png
+
+Done in 186 s. This report is also in /home/amadeus/Physics/lapping_slurry_sim/report.txt
