@@ -1,4 +1,4 @@
-# Lapping slurry simulator
+# Grinding slurry simulator
 
 A physics model of loose-abrasive lapping between two flat plates: silicon
 carbide grains suspended in water, glycerine and dish soap, ground between a
